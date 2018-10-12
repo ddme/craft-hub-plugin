@@ -1,0 +1,21 @@
+{
+    "name": "ddme/craft-hub-plugin",
+    "description": "Craft Hub Plugin.",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "require": {
+        "craftcms/cms": "^3.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+          "ddme\\crafthub\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Craft Hub Plugin",
+        "handle": "crafthub",
+        "hasCpSettings": true,
+        "hasCpSection": false,
+        "class": "ddme\\crafthub\\CraftHub"
+    }
+}

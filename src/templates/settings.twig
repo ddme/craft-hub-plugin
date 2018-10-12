@@ -1,0 +1,11 @@
+{% import "_includes/forms" as forms %}
+
+{{ forms.textField({
+    first:       true,
+    label:       'Access Token',
+    id:          'accessToken',
+    name:        'accessToken',
+    placeholder: 'Access token',
+    value:       settings.accessToken,
+    readonly:    true,
+})}}
