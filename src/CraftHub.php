@@ -7,8 +7,10 @@ use ddme\crafthub\models\Settings;
 use Craft;
 use craft\base\Plugin;
 use craft\events\PluginEvent;
+use craft\events\RegisterUrlRulesEvent;
 use craft\helpers\UrlHelper;
 use craft\services\Plugins;
+use craft\web\UrlManager;
 
 use Yii\base\Event;
 
@@ -47,6 +49,15 @@ class CraftHub extends Plugin
             }
         );
 
+        // Register our CP routes
+        Event::on(
+            UrlManager::class,
+            UrlManager::EVENT_REGISTER_CP_URL_RULES,
+            function (RegisterUrlRulesEvent $event) {
+                $event->rules['settings/crafthub/token'] = 'crafthub/settings/token';
+            }
+        );
+
         // Register components
         $this->setComponents([
             'tokenService' => \ddme\crafthub\services\TokenService::class,
@@ -63,15 +74,7 @@ class CraftHub extends Plugin
 
     protected function settingsHtml(): string
     {
-        // Get and pre-validate the settings
-        $settings = $this->getSettings();
-        $settings->validate();
 
-        return Craft::$app->view->renderTemplate(
-            'crafthub/settings',
-            [
-                'settings' => $settings,
-            ]
-        );
+        return Craft::$app->view->renderTemplate('crafthub/settings');
     }
 }

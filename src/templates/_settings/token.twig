@@ -1,0 +1,23 @@
+{% extends "_layouts/cp" %}
+
+{% requireAdmin %}
+
+{% do view.registerAssetBundle("ddme\\crafthub\\assetbundles\\CpBundle") %}
+
+{% block content %}
+  <div class="ch-wrapper">
+    <div class="ch-icon">
+      {% include "crafthub/_icons/fontawesome/solid/key.svg" ignore missing %}
+    </div>
+
+    <div class="ch-heading">Access token</div>
+
+    <div class="ch-description">
+      This is your site's unique access token. You'll need this when adding your site to <a href="https://crafthub.app" target="_blank">Craft Hub</a>.
+    </div>
+
+    <div class="ch-token">
+      {{ settings.accessToken }}
+    </div>
+  </div>
+{% endblock %}

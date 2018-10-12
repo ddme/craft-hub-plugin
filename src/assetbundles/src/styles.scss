@@ -1,0 +1,33 @@
+@tailwind preflight;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.ch-wrapper {
+    @apply w-1/2 mx-auto leading-normal text-center;
+
+    @screen md {
+        @apply pt-8;
+    }
+}
+
+.ch-icon {
+    @apply w-16 h-16 mx-auto mb-6 fill-current text-yellow-dark;
+}
+
+.ch-heading {
+    @apply text-xl font-bold mb-4;
+}
+
+.ch-description {
+    @apply text-lg text-grey-dark mb-4;
+}
+
+.ch-token {
+    @apply p-4 text-lg text-center border-2 border-solid border-grey-light rounded-sm;
+
+    &:hover {
+        @apply bg-grey-lightest;
+    }
+}
