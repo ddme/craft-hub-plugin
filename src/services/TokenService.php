@@ -26,7 +26,10 @@ class TokenService extends Component
 
     public function generateToken()
     {
-        $token = date('dmY').'_'.md5(uniqid());
+        // Generate MD5 hash using combination of system uid & uniqid()
+        $uid = Craft::$app->getSystemUid();
+        $rand = uniqid();
+        $token = md5($uid.$rand);
 
         Craft::$app->plugins->savePluginSettings($this->plugin, [
             'accessToken' => $token,
