@@ -12,7 +12,7 @@
         }
     },
     "extra": {
-        "name": "Craft Hub Plugin",
+        "name": "Craft Hub",
         "handle": "crafthub",
         "hasCpSettings": true,
         "hasCpSection": false,
