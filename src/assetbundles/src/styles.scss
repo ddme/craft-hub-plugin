@@ -13,19 +13,19 @@
 }
 
 .ch-icon {
-    @apply w-16 h-16 mx-auto mb-6 fill-current text-yellow-dark;
+    @apply w-24 h-24 mx-auto mb-6;
 }
 
 .ch-heading {
-    @apply text-xl font-bold mb-4;
+    @apply text-xl font-bold mb-3;
 }
 
 .ch-description {
-    @apply text-lg text-grey-dark mb-4;
+    @apply text-base text-grey-dark mb-4;
 }
 
 .ch-token {
-    @apply p-4 text-lg text-center border-2 border-solid border-grey-light rounded-sm;
+    @apply p-4 text-lg text-center border-2 border-dashed border-grey-light rounded-sm;
 
     &:hover {
         @apply bg-grey-lightest;
