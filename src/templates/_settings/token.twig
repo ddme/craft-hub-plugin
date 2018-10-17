@@ -35,6 +35,13 @@
       <div>
         <a class="ch-button" href="https://crafthub.app" target="_blank">Go to Craft Hub</a>
       </div>
+      <div>
+        <form>
+          {{ csrfInput() }}
+          <input type="hidden" name="action" value="generate-new-token">
+          <button class="ch-button ch-secondary" type="button">Generate new token</button>
+        </form>
+      </div>
     </div>
   </div>
 {% endblock %}

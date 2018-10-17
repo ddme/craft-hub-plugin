@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 .ch-wrapper {
-    @apply w-1/2 mx-auto leading-normal text-center;
+    @apply w-1/2 mx-auto text-black leading-normal text-center;
 
     @screen md {
         @apply pt-8;
@@ -41,14 +41,14 @@
 }
 
 .ch-controls {
-    @apply flex flex-wrap -mx-4;
+    @apply flex flex-wrap -mx-2;
 
     @screen md {
         @apply justify-center;
     }
 
     > div {
-        @apply w-full px-4 mb-4;
+        @apply w-full px-2 mb-4;
 
         @screen md {
             @apply w-auto;
@@ -57,7 +57,7 @@
 }
 
 .ch-button {
-    @apply inline-block px-4 py-3 bg-ch-orange text-sm text-white no-underline rounded-sm;
+    @apply inline-block px-4 py-3 bg-ch-orange text-sm text-white leading-normal no-underline rounded-sm;
 
     &:hover {
         @apply bg-ch-orange-dark no-underline;
@@ -67,7 +67,19 @@
         @apply bg-ch-orange-darker;
     }
 
-    &.button-small {
-        @apply px-3 py-2 text-sm;
+    &:focus {
+        @apply outline-none;
+    }
+
+    &.ch-secondary {
+        @apply bg-grey-lighter text-black;
+
+        &:hover {
+            @apply bg-grey-light;
+        }
+
+        &:active {
+            @apply bg-grey;
+        }
     }
 }
