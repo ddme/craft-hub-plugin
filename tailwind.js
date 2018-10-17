@@ -56,6 +56,14 @@ let colors = {
   'grey-lightest': '#f8fafc',
   'white': '#ffffff',
 
+  'ch-orange-lightest': '#fcecea',
+  'ch-orange-lighter': '#f5b3aa',
+  'ch-orange-light': '#ed7b6b',
+  'ch-orange': '#e5422b',
+  'ch-orange-dark': '#ce3b27',
+  'ch-orange-darker': '#89281a',
+  'ch-orange-darkest': '#45140d',
+
   'red-darkest': '#a61915',
   'red-darker': '#b81c17',
   'red-dark': '#cc1f1a',
