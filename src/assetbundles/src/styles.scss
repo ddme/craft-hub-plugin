@@ -22,12 +22,52 @@
 
 .ch-description {
     @apply text-base text-grey-dark mb-4;
+
+    a {
+        @apply text-ch-orange no-underline;
+
+        &:hover {
+            @apply underline;
+        }
+    }
 }
 
 .ch-token {
-    @apply p-4 text-lg text-center border-2 border-dashed border-grey-light rounded-sm;
+    @apply p-4 mb-6 text-lg text-center border-2 border-dashed border-grey-light rounded-sm;
 
     &:hover {
-        @apply bg-grey-lightest;
+        @apply bg-grey-lightest border-ch-orange;
+    }
+}
+
+.ch-controls {
+    @apply flex flex-wrap -mx-4;
+
+    @screen md {
+        @apply justify-center;
+    }
+
+    > div {
+        @apply w-full px-4 mb-4;
+
+        @screen md {
+            @apply w-auto;
+        }
+    }
+}
+
+.ch-button {
+    @apply inline-block px-4 py-3 bg-ch-orange text-sm text-white no-underline rounded-sm;
+
+    &:hover {
+        @apply bg-ch-orange-dark no-underline;
+    }
+
+    &:active {
+        @apply bg-ch-orange-darker;
+    }
+
+    &.button-small {
+        @apply px-3 py-2 text-sm;
     }
 }
