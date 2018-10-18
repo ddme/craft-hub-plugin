@@ -6388,6 +6388,19 @@ table {
   border-color: #e5422b;
 }
 
+.ch-message {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  background-color: #e3fcec;
+  font-size: 1rem;
+  text-align: left;
+  border-left-width: 4px;
+  border-style: solid;
+  border-color: #38c172;
+  border-radius: .125rem;
+}
+
 .ch-controls {
   display: -webkit-box;
   display: -ms-flexbox;

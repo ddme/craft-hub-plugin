@@ -40,6 +40,10 @@
     }
 }
 
+.ch-message {
+    @apply w-full p-4 mb-6 bg-green-lightest text-base text-left border-l-4 border-solid border-green rounded-sm;
+}
+
 .ch-controls {
     @apply flex flex-wrap -mx-2;
 

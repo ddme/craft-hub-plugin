@@ -27,19 +27,21 @@
       This is your site's unique access token. You'll need this when adding your site to <a href="https://crafthub.app" target="_blank">Craft Hub</a>.
     </div>
 
-    <div class="ch-token">
-      {{ settings.accessToken }}
-    </div>
+    <div class="ch-token">{{ settings.accessToken }}</div>
+
+    {% if chNewToken is defined and chNewToken %}
+      <div class="ch-message">New access token created. Don't forget to update your site's settings on Craft Hub!</div>
+    {% endif %}
 
     <div class="ch-controls">
       <div>
         <a class="ch-button" href="https://crafthub.app" target="_blank">Go to Craft Hub</a>
       </div>
       <div>
-        <form>
+        <form method="post">
           {{ csrfInput() }}
-          <input type="hidden" name="action" value="generate-new-token">
-          <button class="ch-button ch-secondary" type="button">Generate new token</button>
+          <input type="hidden" name="action" value="crafthub/token/new-token">
+          <button class="ch-button ch-secondary" type="submit">Generate new token</button>
         </form>
       </div>
     </div>
