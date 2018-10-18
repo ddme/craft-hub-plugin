@@ -1,6 +1,6 @@
 {
     "name": "ddme/craft-hub-plugin",
-    "description": "Craft Hub Plugin.",
+    "description": "Monitor your Craft CMS sites from a single dashboard.",
     "type": "craft-plugin",
     "version": "1.0.0",
     "require": {
