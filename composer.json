@@ -2,7 +2,18 @@
     "name": "ddme/craft-hub-plugin",
     "description": "Monitor your Craft CMS sites from a single dashboard.",
     "type": "craft-plugin",
-    "version": "1.0.1",
+    "version": "1.0.2",
+    "support": {
+        "docs": "https://github.com/ddme/craft-hub-plugin/blob/master/README.md",
+        "issues": "https://github.com/ddme/craft-hub-plugin/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "DDME",
+            "homepage": "https://www.ddme.uk"
+        }
+    ],
     "require": {
         "craftcms/cms": "^3.0.0"
     },
